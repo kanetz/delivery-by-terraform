@@ -17,4 +17,9 @@ pipeline {
             }
         }
     }
+    post { 
+        success { 
+            archiveArtifacts artifacts: 'customized', followSymlinks: false
+        }
+    }
 }
